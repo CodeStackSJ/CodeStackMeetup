@@ -34,8 +34,10 @@ class MainActivity : AppCompatActivity() {
                     .show()
 
             } catch (exception: IllegalArgumentException) {
-                Snackbar.make(view, "\"$newColorString\" is not a recognized color. Please try again.", Snackbar.LENGTH_SHORT)
-                    .show()
+                Snackbar.make(
+                    view,
+                    "\"$newColorString\" is not a recognized color. Please try again.",
+                    Snackbar.LENGTH_SHORT).show()
             }
         }
     }
