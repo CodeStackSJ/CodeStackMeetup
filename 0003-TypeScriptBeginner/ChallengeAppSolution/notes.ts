@@ -69,7 +69,7 @@ function addNote(): void {
     }
 
     // Type strict params
-    unorderedList.appendChild(createNewNoteItem(note));
+    unorderedList.appendChild<HTMLLIElement>(createNewNoteItem(note));
 }
 
 function createNewNoteItem(note: CodeStackNote): HTMLLIElement {
@@ -77,16 +77,16 @@ function createNewNoteItem(note: CodeStackNote): HTMLLIElement {
     let newListItem = document.createElement('li');
     const id = Math.random();
     newListItem.id = id.toString();
-    let trashButton: HTMLElement = createTrashButton(id);
+    let trashButton: HTMLLabelElement = createTrashButton(id);
 
     // special syntax for including variable in strings
     newListItem.innerHTML = `NOTE: ${note.text} <br> DATE: ${note.date} <br> PRIORITY: ${note.priority} <br>`;
-    newListItem.appendChild(trashButton);
+    newListItem.appendChild<HTMLLabelElement>(trashButton);
     // Type strict return values
     return newListItem;
 }
 
-function createTrashButton(id: number): HTMLElement {
+function createTrashButton(id: number): HTMLLabelElement {
     let label = document.createElement('label');
     label.htmlFor = 'trash';
     label.innerHTML = 'DELETE ';
@@ -96,7 +96,7 @@ function createTrashButton(id: number): HTMLElement {
 
     // Instantiate custom classes
     let img: CodeStackImage = new CodeStackImage(20, './assets/images/trash-icon.png',  'Trash', 'trash');
-    label.appendChild(img.toImgEle());
+    label.appendChild<HTMLImageElement>(img.toImgEle());
     return label;
 }
 
@@ -120,7 +120,7 @@ function addTodo(): void {
     }
 
     // add new todo element as child to list
-    divTodoList.appendChild(createTodoItem(todo));
+    divTodoList.appendChild<HTMLDivElement>(createTodoItem(todo));
 }
 
 function createTodoItem(todo: CodeStackTodo): HTMLDivElement {

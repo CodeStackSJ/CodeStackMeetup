@@ -37,24 +37,24 @@ function addNote() {
     }
 
     // Type strict params
-    unorderedList.appendChild(createNewNoteItem(note));
+    unorderedList.appendChild<HTMLLIElement>(createNewNoteItem(note));
 }
 
 function createNewNoteItem(note: CodeStackNote): HTMLLIElement {
 
     // implicit types
     let newListItem = document.createElement('li');
-    let trashButton: HTMLElement = createTrashButton();
+    let trashButton: HTMLLabelElement = createTrashButton();
 
     // special syntax for including variable in strings
     newListItem.innerHTML = `NOTE: ${note.text} <br> DATE: ${note.date} <br> PRIORITY: ${note.priority}<br>`;
-    newListItem.appendChild(trashButton);
+    newListItem.appendChild<HTMLLabelElement>(trashButton);
 
     // Type strict return values
     return newListItem;
 }
 
-function createTrashButton(): HTMLElement {
+function createTrashButton(): HTMLLabelElement {
     let label = document.createElement('label');
     label.htmlFor = 'trash';
     label.innerHTML = 'DELETE (Make Me Work)';
@@ -62,6 +62,6 @@ function createTrashButton(): HTMLElement {
 
     // Instantiate custom classes
     let img: CodeStackImage = new CodeStackImage(20, './assets/images/trash-icon.png',  'Trash');
-    label.appendChild(img.toImgEle());
+    label.appendChild<HTMLImageElement>(img.toImgEle());
     return label;
 }
