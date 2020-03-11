@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+    <title>CODESTACK MEETUP NOTES</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row title center standard-padding">
+        <div class="col-lg-12">
+            <img class="title-img" src="./assets/images/MeetupsLogo.png" alt="CODESTACK MEETUP LOGO" width="50px">
+            <h1>TYPESCRIPT APP</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6"> 
+            <div class="row standard-padding">
+                <div class="col-lg-12">
+                    <h3>NOTES</h3>
+                </div>
+            </div>
+            <div class="row standard-padding">
+                <div class="col-lg-3">
+                    <label for="note">
+                        <strong>ENTER NOTE:</strong>
+                    </label>
+                </div>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" name="note" id="note">
+                </div>
+                <div class="col-lg-4">
+                    <div class="btn btn-primary" onclick="addNote()">ADD NOTE</div>
+                </div>
+            </div>
+            <div class="notes-list">
+                <ul id="notes-list">
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row standard-padding">
+                <div class="col-lg-12">
+                    <h3>TODO ITEMS</h3>
+                </div>
+            </div>
+            <div class="row standard-padding">
+                <div class="col-lg-3">
+                    <label for="todo">
+                        <strong>ENTER TODO:</strong>
+                    </label>
+                </div>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" name="todo" id="todo">
+                </div>
+                <div class="col-lg-4">
+                    <div class="btn btn-primary" onclick="addTodo()">ADD TODO</div>
+                </div>
+            </div>
+            <div class="notes-list">
+                <div id="todo-list">
+                </div>
+                <p>
+                    <strong>Coding Challenge:</strong> <br>
+                    Convert this side of this app into a TODO app, <br> 
+
+                    Requirements:
+                    <ul>
+                        <li>
+                            Use TYPESCRIPT, all function must be type strict for params and return value where applicable!
+                        </li>
+                        <li>
+                            Use 3 built-in types.
+                        </li>
+                        <li>
+                            Use at least 1 custom type.
+                        </li>
+                        <li>
+                            Use at least 1 custom class, with at least 1 function and constructor
+                        </li>
+                        <li>
+                            User must be able to add new TODO items.
+                        </li>
+                        <li>
+                            User must be able to check off list items (There must be some way to indicate that task is done.)
+                        </li>
+                    </ul>
+
+                    <strong>
+                        Stretch Goal: <br>
+                    </strong>
+                    <ul>
+                        <li>
+                            Make TODO items removable.
+                        </li>
+                        <li>
+                            Make TODO items editable.
+                        </li>
+                        <li>
+                            Make delete trash can icon work to remove notes for NOTES side of APP.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="notes.js"></script>

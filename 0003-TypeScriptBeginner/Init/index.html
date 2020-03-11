@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <title>CODESTACK MEETUP NOTES</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row title center standard-padding">
+        <div class="col-lg-12">
+            <img class="title-img" src="./assets/images/MeetupsLogo.png" alt="CODESTACK MEETUP LOGO" width="50px">
+            <h1>TYPESCRIPT APP</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6"> 
+            <div class="row standard-padding">
+                <div class="col-lg-12">
+                    <h3>NOTES</h3>
+                </div>
+            </div>
+            <div class="row standard-padding">
+                <div class="col-lg-3">
+                    <label for="note">
+                        <strong>ENTER NOTE:</strong>
+                    </label>
+                </div>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" name="note" id="note">
+                </div>
+                <div class="col-lg-4">
+                    <div class="btn btn-primary" onclick="addNote()">ADD NOTE</div>
+                </div>
+            </div>
+            <div class="notes-list">
+                <ul id="notes-list">
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row standard-padding">
+                <div class="col-lg-12">
+                    <h3>TODO ITEMS</h3>
+                </div>
+            </div>
+            <div class="row standard-padding">
+                <div class="col-lg-3">
+                    <label for="todo">
+                        <strong>ENTER TODO:</strong>
+                    </label>
+                </div>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" name="todo" id="todo">
+                </div>
+                <div class="col-lg-4">
+                    <div class="btn btn-primary" onclick="addTodo()">ADD TODO</div>
+                </div>
+            </div>
+            <div class="notes-list">
+                <div id="todo-list">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="notes.js"></script>
