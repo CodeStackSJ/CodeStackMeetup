@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(119, 164, 247);
+    color: #eeeeee;
+}
+
+.heading {
+    color: #eeeeee;
+}
+
+#main-header {
+    color: #eeeeee; 
+}
+
+.flex {
+    display: flex; 
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+img {
+    max-width: 50%;
+}
+
+@media screen and (min-width: 701px) {
+    li {
+        margin: 40px;
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    li {
+        margin-top: 13px;
+        font-size: 12px;
+    }
+}
