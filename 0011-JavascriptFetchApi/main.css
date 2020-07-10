@@ -1,0 +1,46 @@
+.title {
+    width: 100%;
+    color: white;
+    background-color: #102753;
+}
+
+.title-img {
+    float: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;   
+}
+
+.standard-padding {
+    padding: 20px 10px;
+}
+
+.notes-list {
+    padding-left: 50px;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.delete-btn {
+    border: 2px solid #8b0000;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todoListItem {
+    padding: 10px 0;
+}
+
+.checkbox { 
+    margin-right: 5px;
+}
