@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+
+	<body>
+		<!-- Skip links (see https://webaim.org/techniques/skipnav/) -->
+		<a href="#nav" style="display:none;">Skip to navigation</a>
+		<a href="#main" style="display:none;">Skip to the main content</a>
+
+		<header>
+			<!-- Will announce "Primary navigation" -->
+			<nav id="nav" aria-label="Primary">
+				<ul role="menu">
+					<li role="menuitem">
+						<a href="/">Home</a>
+					</li>
+					<li role="menuitem">
+						<a href="/about">About</a>
+					</li>
+					<li role="menuitem">
+						<a href="/archive">Archive</a>
+					</li>
+					<li role="menuitem">
+						<a href="#">Top of Page</a>
+					</li>
+				</ul>
+			</nav>
+
+			<h1>Blog</h1>
+		</header>
+
+		<main id="main" role="main">
+			<h2>Main Content</h2>
+
+			<article id="article1" aria-labelledby="article1-heading">
+				<nav></nav>
+				<h3 id="article1-heading">Article Title</h3>
+				...
+				<a href="/article1">Read more</a>
+			</article>
+
+			<article aria-labelledby="article2-heading">
+				<nav></nav>
+				<h3 id="article2-heading">Article Title</h3>
+				...
+				<a href="/article2">Read more</a>
+			</article>
+
+			<article aria-labelledby="article3-heading">
+				<nav></nav>
+				<h3 id="article3-heading">Article Title</h3>
+				...
+				<a href="/article3">Read more</a>
+			</article>
+
+			<a href="/page2">Next Page &raquo;</a>
+		</main>
+
+		<footer>
+			&copy; Nobody 2020
+		</footer>
+
+	</body>
+
+</html>
