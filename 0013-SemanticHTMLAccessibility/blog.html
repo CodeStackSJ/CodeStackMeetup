@@ -5,12 +5,23 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Document</title>
+
+		<style>
+			/* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+			.hide {
+				position: absolute !important;
+				height: 1px;
+				width: 1px;
+				overflow: hidden;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
 	</head>
 
 	<body>
 		<!-- Skip links (see https://webaim.org/techniques/skipnav/) -->
-		<a href="#nav" style="display:none;">Skip to navigation</a>
-		<a href="#main" style="display:none;">Skip to the main content</a>
+		<a href="#nav" class="hide">Skip to navigation</a>
+		<a href="#main" class="hide">Skip to the main content</a>
 
 		<header>
 			<!-- Will announce "Primary navigation" -->
