@@ -1,0 +1,7 @@
+node_modules
+bin
+obj
+t.*
+*.ini
+*.log
+.DS_Store
