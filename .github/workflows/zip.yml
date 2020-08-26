@@ -1,3 +1,5 @@
+on: workflow_dispatch
+
 name: zip
 runs-on: macos-latest
 strategy:
