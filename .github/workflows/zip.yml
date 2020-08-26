@@ -17,5 +17,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add '*.zip'
-          git commit -m 'chore":" update zip files'
+          git commit -m 'chore: update zip files'
           git push
