@@ -8,3 +8,5 @@ Format: `[{Id}] {Folder}: {Description}`
 
 example: `[0002] init: added starter code base`
 
+## Downloading
+Zip files of each presentation are available within each folder. You can also download the entire repository as a zip through the web interface.
