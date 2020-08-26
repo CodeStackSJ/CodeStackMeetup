@@ -16,7 +16,7 @@ steps:
     run: git add '*.zip'
 
   - name: commit
-    run: git commit -m 'chore: update zip files'
+    run: git commit -m 'chore":" update zip files'
 
   - name: push
     run: git push
