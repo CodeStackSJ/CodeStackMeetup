@@ -23,4 +23,4 @@ jobs:
         run: git commit -m 'chore":" update zip files'
 
       - name: push
-        run: git push
+        run: git push origin master
