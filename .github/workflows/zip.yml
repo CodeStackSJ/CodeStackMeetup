@@ -12,15 +12,10 @@ jobs:
         uses: actions/checkout@v1
         with:
           fetch-depth: 0
-
-      - name: zip
-        run: sh ./zip.sh
-
-      - name: add
-        run: git add '*.zip'
-
-      - name: commit
-        run: git commit -m 'chore":" update zip files'
-
-      - name: push
-        run: git push origin master
+      - run: |
+          sh ./zip.sh
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add '*.zip'
+          git commit -m 'chore":" update zip files'
+          git push
