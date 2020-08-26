@@ -1,23 +1,22 @@
 name: zip
 runs-on: macos-latest
 strategy:
-	fail-fast: false
+  fail-fast: false
 
 steps:
-	- name: checkout
-		uses: actions/checkout@v1
-		with:
-			fetch-depth: 0
+  - name: checkout
+    uses: actions/checkout@v1
+    with:
+      fetch-depth: 0
 
-	- name: zip
-		run: sh ./zip.sh
+  - name: zip
+    run: sh ./zip.sh
 
-	- name: add
-		run: git add '*.zip'
+  - name: add
+    run: git add '*.zip'
 
-	- name: commit
-		run: git commit -m 'chore: update zip files'
+  - name: commit
+    run: git commit -m 'chore: update zip files'
 
-	- name: push
-		run: git push
-
+  - name: push
+    run: git push
