@@ -23,5 +23,6 @@ jobs:
           fi
           done
 
+          git add $(git ls-files -o --exclude-standard)
           git commit -m 'chore: update zip files'
           git push
