@@ -1,4 +1,4 @@
-on: workflow_dispatch
+on: push
 
 jobs:
   zip:
@@ -18,8 +18,7 @@ jobs:
           for y in `git diff --name-only`
           do
           if [[ $y =~ [.]zip$ ]]; then
-            echo "Staging $y..."
-            git add $y;
+            echo "  ¬ $y is already stored in git. Skipping update."
           fi
           done
 
