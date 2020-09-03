@@ -15,13 +15,18 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
 
-          for y in `git diff --name-only`
+          for entry in `git diff --name-only`
           do
-          if [[ $y =~ [.]zip$ ]]; then
-            echo "  ¬ $y is already stored in git. Skipping update."
+          if [[ $entry =~ [.]zip$ ]]; then
+            echo "  ¬ $entry is already stored in git. Skipping update."
+            git checkout -- $entry
           fi
           done
 
-          git add $(git ls-files -o --exclude-standard)
-          git commit -m 'chore: update zip files'
-          git push
+          if [[ $(git status -s) ]]; then
+            git add $(git ls-files -o --exclude-standard)
+            git commit -m 'chore: update zip files'
+            git push
+          else
+            echo "No changes to commit."
+          fi
