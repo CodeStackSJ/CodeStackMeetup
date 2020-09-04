@@ -10,23 +10,31 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          sh ./zip.sh
+          sh zip.sh
 
           git config user.name github-actions
           git config user.email github-actions@github.com
 
+          echo "Skipping tracked zip files:"
           for entry in `git diff --name-only`
           do
           if [[ $entry =~ [.]zip$ ]]; then
-            echo "  ¬ $entry is already stored in git. Skipping update."
+            echo "  ¬ $entry"
             git checkout -- $entry
           fi
           done
 
           if [[ $(git status -s) ]]; then
-            git add $(git ls-files -o --exclude-standard)
+            echo "Adding untracked zip files:"
+            for entry in `git ls-files -o --exclude-standard`
+            do
+            if [[ $entry =~ [.]zip$ ]]; then
+              echo "  ¬ $entry"
+              git add $entry
+            fi
+            done
             git commit -m 'chore: update zip files'
             git push
           else
-            echo "No changes to commit."
+            echo "No zip files left to commit."
           fi
