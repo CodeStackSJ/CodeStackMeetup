@@ -33,7 +33,7 @@ jobs:
               git add $entry
             fi
             done
-            git commit -m 'chore: update zip files'
+            git commit -m 'chore: add zip file'
             git push
           else
             echo "No zip files left to commit."
