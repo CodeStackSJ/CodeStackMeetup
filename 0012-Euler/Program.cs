@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace _0012_Euler
@@ -110,10 +111,21 @@ namespace _0012_Euler
 						i = (i == 2) ? i + 1 : i + 2;
 					}
 
-					// how we get primes can be improved
+					primes = getPrimesUnder((long)Math.Sqrt((double)number));
+
+					// how we find largest match can be improved
+					// use Intersect() function to get the list of numbers both lists contain.
+					// then use Max() function to give me the largest number
+					var largest = factors.Intersect(primes).Max();
+					System.Console.WriteLine(largest);
+				}
+
+				public static List<long> getPrimesUnder(long max) {
+
+					var primes = new List<long>();
 					var q = 2L;
 					// big improvement here, we stop at the square-root of 'number' which makes sense. In this case, its around 700k, which isn't unbearable.
-					while (q*q < number)
+					while (q < max)
 					{
 						var t = primes.Any(x => q % x == 0);
 						// if true, not prime
@@ -124,12 +136,7 @@ namespace _0012_Euler
 						q = (q == 2) ? q + 1 : q + 2; // instead of incrementing by 1, we increment by 2
 						// q++;
 					}
-
-					// how we find largest match can be improved
-					// use Intersect() function to get the list of numbers both lists contain.
-					// then use Max() function to give me the largest number
-					var largest = factors.Intersect(primes).Max();
-					System.Console.WriteLine(largest);
+					return primes;
 				}
     }
 }
