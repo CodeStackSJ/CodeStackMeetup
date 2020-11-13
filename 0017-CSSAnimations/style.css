@@ -1,0 +1,201 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+}
+
+.content {
+    background-color: #ffffff;
+    margin: 2rem;
+    padding: 3rem;
+    text-align: center;
+    width: 60vw;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    margin: 2rem;
+    font-weight: bolder;
+    font-size: 3rem;
+    color: #000000;
+}
+
+.boxSlide {
+    background-color: #ff7f50;
+    width: 9rem;
+    height: 9rem;
+    margin: auto;
+    animation-name: slideAnimation;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(-10rem);
+    }
+    100% {
+        transform: translateX(10rem);
+    }
+}
+
+.boxSpin {
+    background-color: #1c50e0;
+    width: 9rem;
+    height: 9rem;
+    margin: auto;
+    animation-name: spinAnimation;
+    animation-duration: 5000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spinAnimation {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.colorChange {
+    background-color: #d30909;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    margin: auto;
+    animation-name: colorChangeAnimation;
+    animation-duration: 5000ms;
+    animation-fill-mode: forwards;
+    animation-delay: 3000ms;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colorChangeAnimation {
+    0% {
+        background-color: #d30909;
+    }
+    25% {
+        background-color: #da810d;
+    }
+    50% {
+        background-color: #fff01d;
+    }
+    75% {
+        background-color: #22db0a;
+    }
+    100% {
+        background-color: #1067d8;
+    }
+}
+.loading {
+    font-weight: 900;
+    animation-name: loading;
+    animation-duration: 4000ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    25% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    75% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+}
+
+.btn {
+    background-color: #ddd;
+    margin: 2rem;
+    color: #000000;
+}
+
+.button-one {
+    transition: background-color 200ms, color 200ms;
+}
+
+.button-one:hover {
+    background-color: #07aa0f;
+    color: #ffffff;
+}
+
+.button-two {
+    transition: background-color 200ms, color 200ms, transform 200ms;
+}
+
+.button-two:hover {
+    background-color: #eb25f1;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.button-three {
+    transition: background-color 200ms, color 200ms, letter-spacing 200ms;
+}
+
+.button-three:hover {
+    background-color: #0f39aa;
+    color: #ffffff;
+    letter-spacing: 0.1rem;
+}
+
+.button-four {
+    background-image: linear-gradient(45deg, #79c9ff, #73e3ff, #b5ffef, #68ffb4, #adff6a);
+    background-size: 250%;
+    background-position: left;
+    border: none;
+    transition: background-position 300ms;
+}
+
+.button-four:hover {
+    background-position: right;
+}
+
+.links {
+    text-decoration: none;
+    color: #1383ce;
+    position: relative;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.links::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.1rem;
+    background: #1383ce;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease-in;
+}
+
+.links:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
