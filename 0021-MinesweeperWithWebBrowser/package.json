@@ -1,0 +1,10 @@
+{
+	"name": "dom-minesweeper",
+	"private": true,
+	"scripts": {
+		"start": "ws --open --no-conditional-get"
+	},
+	"devDependencies": {
+		"local-web-server": "4.2.1"
+	}
+}

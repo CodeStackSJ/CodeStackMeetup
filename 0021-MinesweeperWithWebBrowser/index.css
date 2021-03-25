@@ -1,0 +1,13 @@
+body {
+	text-align: center;
+}
+
+main {
+	display: grid;
+	justify-content: center;
+	margin: 1rem 0;
+}
+
+main > div {
+	border: 1px solid black;
+}
