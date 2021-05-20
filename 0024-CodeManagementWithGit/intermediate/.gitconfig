@@ -1,0 +1,22 @@
+[branch]
+  autosetuprebase = always
+[core]
+  editor = code --wait
+[diff]
+  colorMoved = zebra
+  tool = code
+[difftool "code"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[init]
+  defaultBranch = ø
+[instaweb]
+  httpd = python
+[pull]
+  rebase = true
+[push]
+  followTags = true
+[transfer]
+  fsckobjects = true
+[user]
+  name = Example Person
+  email = email+example@domain.com
