@@ -1,0 +1,29 @@
+html,body, .container-fluid{
+    height: 100%;
+}
+.bgColor1{
+    background: #ff00cc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+}
+.bgColor2{
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.noPadding{
+    padding: 0px
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top{
+    display: flex;
+    align-items: flex-start;
+}
+.rowHeight{
+    height: 100%;
+}
