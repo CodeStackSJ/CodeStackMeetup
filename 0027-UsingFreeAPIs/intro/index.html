@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./style/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/wickedcss.min (2).css">
+    <title>GenOneDex</title>
+</head>
+
+<body>
+    <div class="container bord screen">
+        <div class=" row">
+            <div class="col-4 stats-area">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h1>Stats</h1>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body stat-text">
+                                <p>HP: <span id="hp"></span></p>
+                                <p>Attack: <span id="attack"></span></p>
+                                <p>Defense: <span id="defense"></span></p>
+                                <p>Special Attack: <span id="specialAttack"></span></p>
+                                <p>Special Defense: <span id="specialDefense"></span><p>
+                                <p>Speed: <span id="speed"></span><p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <h1 id="pokeName">PokeName</h1>
+                <span id="pokeNumber"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-end">
+                <span style="font-size: 42px;">Type: </span>
+            </div>
+            <div class="col d-flex justify-content-start">
+                <button class="btn typeBtn" id="pokeType"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <img class="wiggle" id="pokeImg">
+            </div>
+        </div>
+
+        <div class="move-area">
+            <div class="py-3"></div>
+            <div class="row">
+                <div class="col-5 d-flex justify-content-end">
+                    <button id="pokeFirstMove" class="btn btn-info btnMoves">First Move</button>
+                </div>
+                <div class="col-4 d-flex justify-content-end ">
+                    <button id="pokeSecondMove" class="btn btn-info btnMoves">Second Move</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <h1 class="moves">Moves</h1>
+                </div>
+            </div>
+            <div class="row py-5">
+                <div class="col-5 d-flex justify-content-end">
+                    <button id="pokeThirdMove" class="btn btn-info btnMoves" type="button">Third Move</button>
+                </div>
+                <div class="col-4 d-flex justify-content-end ">
+                    <button id="pokeFourthMove" class="btn btn-info btnMoves" type="button">Fourth Move</button>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-0 py-5">
+            <div class="col-4 d-flex justify-content-center">
+                <button id="prevBtn" class="btn btn-secondary btnMoves" type="button">Previous</button>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+                <button id="randomBtn" class="btn btn-dark btnMoves" type="button">Random</button>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+                <button id="nextBtn" class="btn btn-primary btnMoves" type="button">Next</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./script/script.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

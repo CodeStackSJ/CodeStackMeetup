@@ -1,0 +1,62 @@
+#pokeImg {
+    height: 25rem;
+    width: 25rem;
+}
+
+h1 {
+    margin-bottom: 0rem;
+    padding-left: 4rem;
+}
+
+.stat-text{
+    font-size: 2rem;
+}
+
+.typeBtn {
+    color: white;
+    width: 11rem;
+    font-size: 36px;
+    height: 4rem;
+    margin: 4px 2px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+}
+
+.move-area {
+    background-color: gainsboro;
+    padding-left: 0%;
+}
+
+.btnMoves {
+    width: 10rem;
+    font-size: 22px;
+    height: 5rem;
+}
+
+.bord {
+    border: 1rem solid black;
+    border-radius: 1rem;
+}
+
+body {
+    background-color: purple;
+}
+
+.screen {
+    background-color: white;
+}
+
+.gameboyColor {
+    /* height: 4rem; */
+    padding-top: px;
+}
+
+.stats-area {
+    padding-left: 0%;
+}
+
+.moves{
+   padding-right: 38px;
+}
