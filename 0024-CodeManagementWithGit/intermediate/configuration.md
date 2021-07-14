@@ -38,4 +38,4 @@ Create a `.gitignore` file in the folder you ran `git init` from
 - Uses [glob syntax](https://en.wikipedia.org/wiki/Glob_%28programming%29#Syntax)
 
 ## Further Reading
-- [SSH Authentication]((https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh))
+- [SSH Authentication](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)
