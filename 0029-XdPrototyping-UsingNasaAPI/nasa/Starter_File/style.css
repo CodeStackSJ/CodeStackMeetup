@@ -1,0 +1,34 @@
+body{
+    background-color: black;
+    background-image: radial-gradient( #09173d, black 120%);
+    height: 100vh;
+    color: #c7c7c7;
+    font: 1.3rem  monospace;
+    text-shadow: 0 0 5px #cacbce;
+    font-size: 12px;
+}
+
+.title{
+    margin-right: 50%;
+    margin-left: 50%;
+}
+#ver{
+    float: right;
+    
+}
+a{
+    color: black;
+    font: 1.3rem  monospace;
+    text-shadow: 0 0 5px #cacbce;
+    background-color: #FFFFFF;
+    margin: 10px;
+    
+}
+.story{
+    font-size: 20px;
+    margin-right: 50%;
+}
+
+.maxHeigth{
+    max-width: 40%;
+}
